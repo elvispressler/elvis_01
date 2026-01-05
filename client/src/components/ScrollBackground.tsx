@@ -1,30 +1,46 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 import portraitImage from "@assets/generated_images/professional_cinematic_portrait_of_a_creative_person.png";
 
 export function ScrollBackground() {
   const { scrollY } = useScroll();
-  
-  // Blur effect: Starts blurry (20px) and becomes clear (0px) as you scroll 500px
-  const blurValue = useTransform(scrollY, [0, 500], ["20px", "0px"]);
-  
-  // Optional: Add a slight dark overlay that fades out or adjusts as needed
-  // For now, let's keep it simple to let the image shine, maybe just a constant subtle overlay
-  // or we can make the overlay slightly darker when it's blurry to help text pop
-  const overlayOpacity = useTransform(scrollY, [0, 500], [0.4, 0.2]);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
+  useMotionValueEvent(scrollY, "change", () => {
+    setIsScrolling(true);
+    if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+    
+    scrollTimeout.current = setTimeout(() => {
+      setIsScrolling(false);
+    }, 150); // Small delay to detect when scrolling has stopped
+  });
+
+  // Base blur value based on scroll (same as before)
+  const scrollBlur = useTransform(scrollY, [0, 500], [20, 0]);
+  
+  // We'll use a motion value that animates between the "scroll focus" and "idle blur"
+  // When scrolling: blur = scrollBlur
+  // When stopped: blur = 20
+  
   return (
     <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden bg-background">
       <motion.div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        animate={{ 
+          filter: isScrolling ? `blur(${scrollBlur.get()}px)` : "blur(20px)",
+        }}
+        transition={{ 
+          duration: 0.8, 
+          ease: "easeInOut" 
+        }}
         style={{ 
           backgroundImage: `url(${portraitImage})`,
-          filter: useTransform(blurValue, (v) => `blur(${v})`),
-          scale: 1.05 // Slight scale to prevent blur edges from showing white
+          scale: 1.05 
         }}
       />
       <motion.div 
-        className="absolute inset-0 bg-black"
-        style={{ opacity: overlayOpacity }}
+        className="absolute inset-0 bg-black/40"
       />
     </div>
   );
