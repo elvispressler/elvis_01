@@ -13,7 +13,7 @@ export function ScrollBackground() {
     
     scrollTimeout.current = setTimeout(() => {
       setIsScrolling(false);
-    }, 150); // Small delay to detect when scrolling has stopped
+    }, 1500); // Increased delay to 1.5 seconds for a longer "clear" period after scrolling
   });
 
   // Base blur value based on scroll (same as before)
