@@ -70,8 +70,8 @@ export default function Home() {
           <h1 className="font-display text-6xl md:text-9xl font-black uppercase tracking-[0.15em] mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">
             Erich Florow
           </h1>
-          <p className="text-sm md:text-base text-white/40 max-w-2xl mx-auto font-light tracking-[0.5em] uppercase leading-relaxed">
-            High-Performance IT Infrastructure & Digital Art Direction
+          <p className="text-sm md:text-base text-white/40 max-w-2xl mx-auto font-light tracking-[0.3em] italic leading-relaxed">
+            "Find what you love and let it kill you."
           </p>
         </motion.div>
         
