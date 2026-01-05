@@ -212,10 +212,6 @@ export default function Home() {
               <div className="text-[10px] uppercase tracking-[0.3em] text-white/20 group-hover:text-white/50 transition-colors">Direct Terminal</div>
               <div className="text-lg font-mono text-white/60 border-b border-white/10 group-hover:border-white/50 transition-all">erich.florow@gmail.com</div>
             </a>
-            <a href={`tel:+4915224569986`} className="group space-y-2">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-white/20 group-hover:text-white/50 transition-colors">Mobile Signal</div>
-              <div className="text-lg font-mono text-white/60 border-b border-white/10 group-hover:border-white/50 transition-all">+49 1522 456 9986</div>
-            </a>
           </div>
         </section>
 
