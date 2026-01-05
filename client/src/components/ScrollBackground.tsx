@@ -12,8 +12,8 @@ export function ScrollBackground() {
 
   // Use a spring for super smooth transitions
   const smoothBlurValue = useSpring(30, {
-    stiffness: 40,
-    damping: 25,
+    stiffness: 15, // Much lower stiffness for a slower, more deliberate transition
+    damping: 20,    // Balanced damping for a smooth finish without bounce
     restDelta: 0.001
   });
 
