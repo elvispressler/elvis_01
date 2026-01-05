@@ -16,7 +16,7 @@ export default function Home() {
           className="text-center z-10"
         >
           <h1 className="font-serif text-5xl md:text-8xl font-bold tracking-tight mb-4 drop-shadow-lg">
-            Alex Morgan
+            Erich Florow
           </h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-lg mx-auto font-light tracking-wide">
             Design Engineer & Creative Technologist
