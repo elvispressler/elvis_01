@@ -125,7 +125,7 @@ export default function Home() {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {skill.items.map((item, j) => (
-                      <span key={j} className="text-[10px] font-mono text-white/60">
+                    <span key={j} className="px-2 py-1 text-[10px] font-mono border border-white/10 bg-white/[0.03] text-white/60 group-hover:border-white/30 transition-all rounded-sm">
                         {item}
                       </span>
                     ))}
