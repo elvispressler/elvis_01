@@ -39,7 +39,7 @@ export function ScrollBackground() {
   return (
     <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden bg-[#121212]">
       <motion.div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 w-full h-full bg-cover bg-[center_right_-20%] bg-no-repeat"
         style={{ 
           backgroundImage: `url(${portraitImage})`,
           filter: useTransform(smoothBlurValue, (v) => `blur(${v}px) grayscale(100%) contrast(1.1)`),
