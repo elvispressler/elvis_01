@@ -1,6 +1,6 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
-import portraitImage from "@assets/bg_ef-compressed_1_1767638860618.jpg";
+import portraitImage from "@assets/bg_ef_1_1767639331293.png";
 
 export function ScrollBackground() {
   const { scrollY } = useScroll();
@@ -39,7 +39,7 @@ export function ScrollBackground() {
   return (
     <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden bg-[#121212]">
       <motion.div 
-        className="absolute inset-0 w-full h-full bg-contain bg-top bg-no-repeat"
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{ 
           backgroundImage: `url(${portraitImage})`,
           filter: useTransform(smoothBlurValue, (v) => `blur(${v}px) grayscale(100%) contrast(1.1)`),
