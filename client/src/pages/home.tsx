@@ -65,7 +65,7 @@ export default function Home() {
           className="text-center z-10"
         >
           <div className="inline-block mb-4 px-3 py-1 border border-white/20 bg-white/5 rounded-full">
-            <span className="text-[10px] uppercase tracking-[0.4em] font-display text-white/50">System Manager | IT Ops Lead</span>
+            <span className="text-[10px] uppercase tracking-[0.4em] font-display text-white/50">Infrastructure Architect | Service Operations Lead</span>
           </div>
           <h1 className="font-display text-6xl md:text-9xl font-black uppercase tracking-[0.15em] mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">
             Erich Florow
