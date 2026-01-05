@@ -15,10 +15,10 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center z-10"
         >
-          <h1 className="font-serif text-5xl md:text-8xl font-bold tracking-tight mb-4 drop-shadow-lg">
+          <h1 className="font-display text-5xl md:text-8xl font-black uppercase tracking-[0.2em] mb-4 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">
             Erich Florow
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-lg mx-auto font-light tracking-wide">
+          <p className="text-xl md:text-2xl text-white/60 max-w-lg mx-auto font-light tracking-[0.3em] uppercase">
             Design Engineer & Creative Technologist
           </p>
         </motion.div>
@@ -38,9 +38,9 @@ export default function Home() {
       <main className="max-w-4xl mx-auto px-6 pb-24 space-y-32">
         
         {/* About Section */}
-        <section className="space-y-8 backdrop-blur-md bg-black/30 p-8 md:p-12 rounded-2xl border border-white/10 shadow-2xl">
-          <h2 className="font-serif text-3xl md:text-4xl text-white/90">The Vision</h2>
-          <div className="space-y-6 text-lg md:text-xl text-white/80 leading-relaxed font-light">
+        <section className="space-y-8 backdrop-blur-xl bg-white/[0.02] p-8 md:p-12 rounded-2xl border border-white/5 shadow-2xl">
+          <h2 className="font-display text-2xl md:text-3xl text-white/90 uppercase tracking-widest">The Vision</h2>
+          <div className="space-y-6 text-lg md:text-xl text-white/60 leading-relaxed font-light">
             <p>
               I believe that digital experiences should be felt, not just seen. 
               My work bridges the gap between functional engineering and emotional design.
@@ -54,9 +54,9 @@ export default function Home() {
 
         {/* Selected Work */}
         <section className="space-y-12">
-          <div className="flex items-end justify-between border-b border-white/20 pb-4">
-            <h2 className="font-serif text-3xl md:text-4xl text-white/90">Selected Work</h2>
-            <span className="text-white/50 font-mono text-sm">2024 — 2025</span>
+          <div className="flex items-end justify-between border-b border-white/10 pb-4">
+            <h2 className="font-display text-2xl md:text-3xl text-white/90 uppercase tracking-widest">Selected Work</h2>
+            <span className="text-white/30 font-mono text-xs uppercase tracking-tighter">2024 — 2025</span>
           </div>
           
           <div className="grid gap-6 md:grid-cols-2">
@@ -78,13 +78,13 @@ export default function Home() {
 
         {/* Contact */}
         <section className="py-24 text-center space-y-8">
-          <h2 className="font-serif text-4xl md:text-6xl text-white/90">Let's Create Together</h2>
-          <p className="text-xl text-white/60 max-w-xl mx-auto">
+          <h2 className="font-display text-4xl md:text-6xl text-white/90 uppercase tracking-[0.2em]">Let's Create</h2>
+          <p className="text-xl text-white/40 max-w-xl mx-auto font-light">
             Available for freelance projects and creative collaborations.
           </p>
           <a 
             href="mailto:hello@example.com"
-            className="inline-block px-8 py-4 bg-white text-black font-medium rounded-full hover:bg-white/90 transition-colors"
+            className="inline-block px-10 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs hover:bg-white/90 transition-all hover:scale-105"
           >
             Get in Touch
           </a>
