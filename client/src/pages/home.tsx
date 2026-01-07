@@ -108,32 +108,31 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16">
-            <div className="space-y-6">
-              <h2 className="font-display text-3xl uppercase tracking-widest bg-clip-text bg-gradient-to-r from-white to-white/20 text-transparent">System Profile</h2>
-              <p className="text-white/50 font-light leading-relaxed text-lg">
-                Expert IT-Administrator and System Manager with a mastery of geschäftskritischer 
-                IT-Infrastrukturen. Specialized in deep-level system integration, automated migrations, 
-                and high-availability operations management.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-8">
-              {skills.map((skill, i) => (
-                <div key={i} className="space-y-4">
-                  <h3 className="text-[10px] uppercase tracking-[0.4em] text-white/30 border-b border-white/10 pb-2">
-                    {skill.category}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.items.map((item, j) => (
-                    <span key={j} className="px-2 py-1 text-[10px] font-mono border border-white/10 bg-white/[0.03] text-white/60 group-hover:border-white/30 transition-all rounded-sm">
-                        {item}
-                      </span>
-                    ))}
+            <div className="grid md:grid-cols-2 gap-16">
+              <div className="space-y-6">
+                <h2 className="font-display text-3xl uppercase tracking-widest bg-clip-text bg-gradient-to-r from-white to-white/40 text-transparent">System Profile</h2>
+                <p className="text-white/80 font-light leading-relaxed text-lg">
+                  Spezialist für das Management und die Orchestrierung hochverfügbarer IT-Infrastrukturen.
+                  Fokus auf LifeCycle-Management, Monitoring sowie Service & Operations in komplexen Enterprise-Umgebungen.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-8">
+                {skills.map((skill, i) => (
+                  <div key={i} className="space-y-4 group/skill">
+                    <h3 className="text-[10px] uppercase tracking-[0.4em] text-white/40 border-b border-white/10 pb-2 group-hover/skill:text-white group-hover/skill:border-white/30 transition-all duration-300">
+                      {skill.category}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skill.items.map((item, j) => (
+                        <span key={j} className="px-2 py-1 text-[10px] font-mono border border-white/10 bg-white/[0.03] text-white/60 hover:border-white/50 hover:bg-white/[0.08] hover:text-white transition-all duration-300 rounded-sm cursor-default">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
         </section>
 
         {/* Professional Trajectory */}
