@@ -119,12 +119,12 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-8">
                 {skills.map((skill, i) => (
                   <div key={i} className="space-y-4 group/skill">
-                    <h3 className="text-[10px] uppercase tracking-[0.4em] text-white/40 border-b border-white/10 pb-2 group-hover/skill:text-white group-hover/skill:border-white/30 transition-all duration-300">
+                    <h3 className="text-[10px] uppercase tracking-[0.4em] text-white/40 border-b border-white/10 pb-2 group-hover/skill:text-[#ff0080] group-hover/skill:border-[#ff0080]/50 transition-all duration-300">
                       {skill.category}
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {skill.items.map((item, j) => (
-                        <span key={j} className="px-2 py-1 text-[10px] font-mono border border-white/10 bg-white/[0.03] text-white/60 hover:border-white/50 hover:bg-white/[0.08] hover:text-white transition-all duration-300 rounded-sm cursor-default">
+                        <span key={j} className="px-2 py-1 text-[10px] font-mono border border-white/10 bg-white/[0.03] text-white/60 hover:border-[#ff0080]/50 hover:bg-[#ff0080]/10 hover:text-[#ff0080] transition-all duration-300 rounded-sm cursor-default">
                           {item}
                         </span>
                       ))}
