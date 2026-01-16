@@ -149,11 +149,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="group grid md:grid-cols-4 gap-8"
+                className="group grid md:grid-cols-12 gap-8 md:gap-12"
               >
-                <div className="md:col-span-1 space-y-4">
+                <div className="md:col-span-4 space-y-4 md:border-r md:border-white/5 md:pr-8">
                   <span className="text-[10px] font-mono text-white/40 uppercase tracking-[0.4em] block">{exp.period}</span>
-                  <h3 className="text-2xl font-display uppercase tracking-widest text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#ff0080] transition-all duration-500">
+                  <h3 className="text-2xl font-display uppercase tracking-widest text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#ff0080] transition-all duration-500 break-words">
                     {exp.company}
                   </h3>
                   <div className="text-xs font-mono text-white/60 uppercase tracking-widest leading-relaxed">
@@ -168,7 +168,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="md:col-span-3">
+                <div className="md:col-span-8">
                   <div className="p-8 border border-white/10 bg-white/[0.02] group-hover:bg-white/[0.04] transition-colors rounded-2xl space-y-6">
                     <ul className="space-y-4">
                       {exp.details.map((detail, k) => (
