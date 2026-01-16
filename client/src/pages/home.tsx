@@ -70,7 +70,7 @@ export default function Home() {
           <h1 className="font-display text-6xl md:text-9xl font-black uppercase tracking-[0.15em] mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">
             Erich Florow
           </h1>
-          <p className="text-sm md:text-base text-white/40 max-w-2xl mx-auto font-light tracking-[0.3em] italic leading-relaxed">
+          <p className="text-sm md:text-base text-white/60 max-w-2xl mx-auto font-light tracking-[0.3em] italic leading-relaxed">
             "Find what you love and let it kill you."
           </p>
         </motion.div>
@@ -98,11 +98,11 @@ export default function Home() {
               { icon: <BarChart3 className="w-4 h-4" />, label: "Efficiency", text: "SLA Optimized" },
               { icon: <Users className="w-4 h-4" />, label: "Leadership", text: "Cross-Functional" },
             ].map((box, i) => (
-              <div key={i} className="p-6 border border-white/5 bg-white/[0.01] rounded-lg space-y-3">
-                <div className="text-white/40">{box.icon}</div>
+              <div key={i} className="p-6 border border-white/10 bg-white/[0.03] rounded-lg space-y-3 hover:bg-white/[0.05] transition-colors">
+                <div className="text-white/60">{box.icon}</div>
                 <div>
-                  <div className="text-[9px] uppercase tracking-widest text-white/20 mb-1">{box.label}</div>
-                  <div className="text-xs font-display uppercase tracking-wider">{box.text}</div>
+                  <div className="text-[9px] uppercase tracking-widest text-white/40 mb-1">{box.label}</div>
+                  <div className="text-xs font-display uppercase tracking-wider text-white/90">{box.text}</div>
                 </div>
               </div>
             ))}
@@ -152,16 +152,16 @@ export default function Home() {
                 className="group grid md:grid-cols-4 gap-8"
               >
                 <div className="md:col-span-1 space-y-4">
-                  <span className="text-[10px] font-mono text-white/20 uppercase tracking-[0.4em] block">{exp.period}</span>
-                  <h3 className="text-2xl font-display uppercase tracking-widest text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/40 transition-all duration-500">
+                  <span className="text-[10px] font-mono text-white/40 uppercase tracking-[0.4em] block">{exp.period}</span>
+                  <h3 className="text-2xl font-display uppercase tracking-widest text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#ff0080] transition-all duration-500">
                     {exp.company}
                   </h3>
-                  <div className="text-xs font-mono text-white/40 uppercase tracking-widest leading-relaxed">
+                  <div className="text-xs font-mono text-white/60 uppercase tracking-widest leading-relaxed">
                     {exp.role}
                   </div>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {exp.tags.map((tag, j) => (
-                      <span key={j} className="text-[8px] uppercase tracking-tighter px-2 py-0.5 border border-white/10 bg-white/5 text-white/40 hover:border-[#ff0080]/50 hover:bg-[#ff0080]/10 hover:text-[#ff0080] transition-all duration-300 cursor-default">
+                      <span key={j} className="text-[8px] uppercase tracking-tighter px-2 py-0.5 border border-white/20 bg-white/5 text-white/60 hover:border-[#ff0080]/50 hover:bg-[#ff0080]/10 hover:text-[#ff0080] transition-all duration-300 cursor-default">
                         {tag}
                       </span>
                     ))}
@@ -169,11 +169,11 @@ export default function Home() {
                 </div>
                 
                 <div className="md:col-span-3">
-                  <div className="p-8 border border-white/5 bg-white/[0.01] group-hover:bg-white/[0.02] transition-colors rounded-2xl space-y-6">
+                  <div className="p-8 border border-white/10 bg-white/[0.02] group-hover:bg-white/[0.04] transition-colors rounded-2xl space-y-6">
                     <ul className="space-y-4">
                       {exp.details.map((detail, k) => (
-                        <li key={k} className="flex gap-4 text-white/50 font-light leading-relaxed">
-                          <span className="text-white/20 mt-1.5">—</span>
+                        <li key={k} className="flex gap-4 text-white/70 font-light leading-relaxed">
+                          <span className="text-white/40 mt-1.5">—</span>
                           <span className="text-sm md:text-base">{detail}</span>
                         </li>
                       ))}
