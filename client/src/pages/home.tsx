@@ -17,11 +17,11 @@ export default function Home() {
       role: "System- & Application Manager",
       period: "08/2020 – Present",
       details: [
-        "Lead for Release- and Changemanagement for central insurance systems.",
-        "Infrastructure migration from VM-based deployments to Kubernetes clusters.",
+        "Release- and Changemanagement for central insurance systems",
+        "Infrastructure migration from VM-based deployments to Kubernetes clusters",
         "Implemented a central Log-Host for 200+ K8s deployments in Splunk.",
-        "Devised and managed complex workflow designs via Jira-API and Jira/Confluence platforms.",
-        "Implemented security protocols including NeuVector and vulnerability scans."
+        "complex workflow designs via Jira-API and other REST",
+        "Decision-proofs for log host on ELK or Splunk, dashboard- & alertdesigns, data-extractions for specials"
       ],
       tags: ["Kubernetes", "Splunk", "Jira API", "Release Mgmt"]
     },
