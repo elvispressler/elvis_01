@@ -23,7 +23,7 @@ export default function Home() {
         "complex workflow designs via Jira-API and other REST",
         "Decision-proofs for log host on ELK or Splunk, dashboard- & alertdesigns, data-extractions for specials"
       ],
-      tags: ["Kubernetes", "Splunk", "Jira API", "Release Mgmt"]
+      tags: ["Kubernetes", "Splunk", "Jira API", "KnowledgeBase", "Release Mgmt"]
     },
     {
       company: "Gefasoft GmbH",
