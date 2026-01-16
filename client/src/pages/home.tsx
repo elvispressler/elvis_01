@@ -8,7 +8,7 @@ export default function Home() {
     { category: "Data & API", items: ["Oracle", "PostgreSQL", "Progress", "SQL", "REST-APIs"] },
     { category: "Scripting", items: ["Shell-Scripting", "PowerShell", "SQL/PL-SQL", "JAVA", "Regex"] },
     { category: "Observability", items: ["Splunk", "ELK Stack", "Kibana", "Automic (UC4)"] },
-    { category: "Governance", items: ["ITIL", "Incident/Change/Release Mgmt", "Jira", "Confluence", "ServiceNow"] }
+    { category: "Governance", items: ["ITIL", "BCM", "Jira-ServiceDesk", "iET Solutions", "Incident/Change/Release Mgmt", "Jira", "Confluence", "ServiceNow"] }
   ];
 
   const experience = [
@@ -113,8 +113,7 @@ export default function Home() {
               <div className="space-y-6">
                 <h2 className="font-display text-3xl uppercase tracking-widest bg-clip-text bg-gradient-to-r from-white to-white/40 text-transparent">System Profile</h2>
                 <p className="text-white/80 font-light leading-relaxed text-lg">
-                  Specialist in managing and orchestrating high-availability IT infrastructures.
-                  Focus on LifeCycle Management, Monitoring, and Service & Operations in complex enterprise environments.
+                  Reliable and experienced IT administrator and app lifecycle-Manager with over 20 years of professional experience in IT operations, system integration and ITSM service management. High level of expertise in managing business-critical IT infrastructures, migrations, and release/change management. Excellent communication and organizational skills, highly motivated, with a strong team spirit and the ability to independently handle complex tasks.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-8">
