@@ -5,7 +5,8 @@ import { ArrowDown, Terminal, Cpu, Database, Globe, Code2, Briefcase, Zap, Shiel
 export default function Home() {
   const skills = [
     { category: "Core Ops", items: ["Linux", "Unix", "Windows", "Kubernetes", "Docker", "Jenkins", "Git", "Bash"] },
-    { category: "Data & API", items: ["Oracle", "PostgreSQL", "Progress", "SQL/PL-SQL", "REST-APIs"] },
+    { category: "Data & API", items: ["Oracle", "PostgreSQL", "Progress", "SQL", "REST-APIs"] },
+    { category: "Scripting", items: ["Shell-Scripting", "PowerShell", "SQL/PL-SQL", "JAVA", "Regex"] },
     { category: "Observability", items: ["Splunk", "ELK Stack", "Kibana", "Automic (UC4)"] },
     { category: "Governance", items: ["ITIL", "Incident/Change/Release Mgmt", "Jira", "Confluence", "ServiceNow"] }
   ];
