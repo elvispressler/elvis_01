@@ -19,7 +19,7 @@ export default function Home() {
       details: [
         "Release- and Changemanagement for central insurance systems",
         "Infrastructure migration from VM-based deployments to Kubernetes clusters",
-        "Implemented a central Log-Host for 200+ K8s deployments in Splunk.",
+        "KickOff central log-host for 200+ K8s deployments in Splunk and ELK as functional tests",
         "complex workflow designs via Jira-API and other REST",
         "Decision-proofs for log host on ELK or Splunk, dashboard- & alertdesigns, data-extractions for specials",
         "Documentation"
@@ -188,7 +188,7 @@ export default function Home() {
                         { title: "K8S Migration", impact: "Zero-downtime transition for 200+ microservices", icon: <Cpu className="w-4 h-4" /> },
                         { title: "Log Orchestration", impact: "Centralized Splunk hub for real-time auditability", icon: <BarChart3 className="w-4 h-4" /> },
                         { title: "Jira Automation", impact: "Reduced release cycle overhead by 30% via API", icon: <Zap className="w-4 h-4" /> },
-                        { title: "Security Shield", impact: "Automated NeuVector vulnerability scan pipeline", icon: <Shield className="w-4 h-4" /> }
+                        { title: "PLANS TO COME", impact: "better and faster error-detecting, tuning automated tasks, incident-automation, SOAP to REST transition", icon: <Zap className="w-4 h-4" /> }
                       ].map((project, idx) => (
                         <div key={idx} className="p-4 border border-white/5 bg-white/[0.01] rounded-xl hover:border-[#ff0080]/30 hover:bg-[#ff0080]/5 transition-all duration-500 group/project">
                           <div className="flex items-center gap-3 mb-2">
