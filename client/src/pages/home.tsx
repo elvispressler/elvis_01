@@ -170,7 +170,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="md:col-span-8">
+                <div className="md:col-span-8 space-y-8">
                   <div className="p-8 border border-white/10 bg-white/[0.02] group-hover:bg-white/[0.04] transition-colors rounded-2xl space-y-6">
                     <ul className="space-y-4">
                       {exp.details.map((detail, k) => (
@@ -181,6 +181,25 @@ export default function Home() {
                       ))}
                     </ul>
                   </div>
+
+                  {exp.company === "WWK Versicherungen" && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {[
+                        { title: "K8S Migration", impact: "Zero-downtime transition for 200+ microservices", icon: <Cpu className="w-4 h-4" /> },
+                        { title: "Log Orchestration", impact: "Centralized Splunk hub for real-time auditability", icon: <BarChart3 className="w-4 h-4" /> },
+                        { title: "Jira Automation", impact: "Reduced release cycle overhead by 30% via API", icon: <Zap className="w-4 h-4" /> },
+                        { title: "Security Shield", impact: "Automated NeuVector vulnerability scan pipeline", icon: <Shield className="w-4 h-4" /> }
+                      ].map((project, idx) => (
+                        <div key={idx} className="p-4 border border-white/5 bg-white/[0.01] rounded-xl hover:border-[#ff0080]/30 hover:bg-[#ff0080]/5 transition-all duration-500 group/project">
+                          <div className="flex items-center gap-3 mb-2">
+                            <div className="text-white/30 group-hover/project:text-[#ff0080] transition-colors">{project.icon}</div>
+                            <div className="text-[10px] uppercase tracking-[0.2em] font-display text-white/40 group-hover/project:text-white/80">{project.title}</div>
+                          </div>
+                          <p className="text-xs text-white/40 group-hover/project:text-white/60 font-light leading-relaxed">{project.impact}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
