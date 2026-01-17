@@ -24,7 +24,7 @@ export default function Home() {
         "Decision-proofs for log host on ELK or Splunk, dashboard- & alertdesigns, data-extractions for specials",
         "Documentation"
       ],
-      tags: ["Kubernetes", "Splunk", "Jira API", "KnowledgeBase", "Release Mgmt"]
+      tags: ["Kubernetes", "Splunk", "Jira API", "KnowledgeBase", "Jenkins", "Rancher", "Grafana", "Release Mgmt"]
     },
     {
       company: "Gefasoft GmbH",
