@@ -21,7 +21,8 @@ export default function Home() {
         "Infrastructure migration from VM-based deployments to Kubernetes clusters",
         "Implemented a central Log-Host for 200+ K8s deployments in Splunk.",
         "complex workflow designs via Jira-API and other REST",
-        "Decision-proofs for log host on ELK or Splunk, dashboard- & alertdesigns, data-extractions for specials"
+        "Decision-proofs for log host on ELK or Splunk, dashboard- & alertdesigns, data-extractions for specials",
+        "Documentation"
       ],
       tags: ["Kubernetes", "Splunk", "Jira API", "KnowledgeBase", "Release Mgmt"]
     },
@@ -34,7 +35,8 @@ export default function Home() {
         "Managed 24/7 emergency operations across international time zones.",
         "Full lifecycle ITIL management: Change projects, 2nd & 3rd level support.",
         "Established sustainable KPI and SLA improvement processes.",
-        "Served as Scrum Master for cross-functional service teams."
+        "Served as Scrum Master for cross-functional service teams.",
+        "RCA"
       ],
       tags: ["ITIL", "SLA Mgmt", "Global Support", "Scrum"]
     },
