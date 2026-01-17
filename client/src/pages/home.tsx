@@ -210,19 +210,19 @@ export default function Home() {
                       <div className="font-mono text-xs bg-black/40 border border-white/5 p-6 rounded-lg space-y-2 text-white/40">
                         <div className="flex gap-2">
                           <span className="text-[#ff0080]/50">[01]</span>
-                          <span>> INITIALIZING GLOBAL SUPPORT PROTOCOL... DONE</span>
+                          <span>&gt; INITIALIZING GLOBAL SUPPORT PROTOCOL... DONE</span>
                         </div>
                         <div className="flex gap-2">
                           <span className="text-[#ff0080]/50">[02]</span>
-                          <span>> OPTIMIZING AUTOMOTIVE SLA TIERS (BMW/AUDI)... SUCCESS</span>
+                          <span>&gt; OPTIMIZING AUTOMOTIVE SLA TIERS (BMW/AUDI)... SUCCESS</span>
                         </div>
                         <div className="flex gap-2">
                           <span className="text-[#ff0080]/50">[03]</span>
-                          <span>> DEPLOYING 24/7 EMERGENCY RESPONSE HUB... ACTIVE</span>
+                          <span>&gt; DEPLOYING 24/7 EMERGENCY RESPONSE HUB... ACTIVE</span>
                         </div>
                         <div className="flex gap-2">
                           <span className="text-[#ff0080]/50">[04]</span>
-                          <span>> EXECUTING RCA FOR CRITICAL SYSTEM OUTAGES... LOGGED</span>
+                          <span>&gt; EXECUTING RCA FOR CRITICAL SYSTEM OUTAGES... LOGGED</span>
                         </div>
                       </div>
                     </div>
