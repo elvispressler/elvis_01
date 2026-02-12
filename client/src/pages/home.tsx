@@ -7,7 +7,7 @@ export default function Home() {
     { category: "Core Ops", items: ["Linux", "Unix", "Windows", "Kubernetes", "Docker", "Jenkins", "Git", "Bash"] },
     { category: "Data & API", items: ["Oracle", "PostgreSQL", "Progress", "SQL", "REST-APIs"] },
     { category: "Scripting", items: ["Shell-Scripting", "PowerShell", "SQL/PL-SQL", "JAVA", "Regex"] },
-    { category: "Observability", items: ["Splunk", "ELK Stack", "Kibana", "Automic (UC4)"] },
+    { category: "Observability", items: ["Splunk", "Elastic", "Kibana", "Automic (UC4)"] },
     { category: "Governance", items: ["ITIL", "BCM", "Jira-ServiceDesk", "iET Solutions", "Incident/Change/Release Mgmt", "Jira", "Confluence", "ServiceNow"] }
   ];
 
@@ -203,50 +203,11 @@ export default function Home() {
 
                   {exp.company === "Gefasoft GmbH" && (
                     <div className="space-y-4">
-                      <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/20 mb-2">
-                        <Terminal className="w-3 h-3" />
-                        <span>Project_Execution_Logs</span>
-                      </div>
-                      <div className="font-mono text-xs bg-black/40 border border-white/5 p-6 rounded-lg space-y-2 text-white/40">
-                        <div className="flex gap-2">
-                          <span className="text-[#ff0080]/50">[01]</span>
-                          <span>&gt; INITIALIZING GLOBAL SUPPORT PROTOCOL... DONE</span>
-                        </div>
-                        <div className="flex gap-2">
-                          <span className="text-[#ff0080]/50">[02]</span>
-                          <span>&gt; OPTIMIZING AUTOMOTIVE SLA TIERS (BMW/AUDI)... SUCCESS</span>
-                        </div>
-                        <div className="flex gap-2">
-                          <span className="text-[#ff0080]/50">[03]</span>
-                          <span>&gt; DEPLOYING 24/7 EMERGENCY RESPONSE HUB... ACTIVE</span>
-                        </div>
-                        <div className="flex gap-2">
-                          <span className="text-[#ff0080]/50">[04]</span>
-                          <span>&gt; EXECUTING RCA FOR CRITICAL SYSTEM OUTAGES... LOGGED</span>
-                        </div>
-                      </div>
                     </div>
                   )}
 
                   {exp.company === "Accor Hotels, Central Europe" && (
                     <div className="space-y-4">
-                      <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/20 mb-2">
-                        <Globe className="w-3 h-3" />
-                        <span>Regional_Infrastructure_Matrix</span>
-                      </div>
-                      <div className="grid grid-cols-3 gap-4">
-                        {[
-                          { label: "Germany", status: "Operational" },
-                          { label: "Austria", status: "Integrated" },
-                          { label: "East-Europe", status: "Rollout" }
-                        ].map((region, idx) => (
-                          <div key={idx} className="relative group/region aspect-square border border-white/5 bg-white/[0.01] rounded-lg overflow-hidden flex flex-col items-center justify-center p-2 text-center hover:border-[#ff0080]/20 transition-all duration-700">
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#ff0080]/5 to-transparent opacity-0 group-hover/region:opacity-100 transition-opacity" />
-                            <div className="text-[9px] uppercase tracking-widest text-white/30 mb-1">{region.label}</div>
-                            <div className="text-[10px] font-mono text-white/60 group-hover/region:text-[#ff0080] transition-colors">{region.status}</div>
-                          </div>
-                        ))}
-                      </div>
                     </div>
                   )}
                 </div>
