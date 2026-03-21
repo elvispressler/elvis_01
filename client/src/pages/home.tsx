@@ -255,25 +255,19 @@ export default function Home() {
         </section>
 
         {/* Interests */}
-        <section className="py-20 border-b border-white/5">
+        <section className="py-20 border-b border-white/5 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-[10px] uppercase tracking-[0.5em] text-white/40">Beyond the Terminal</h2>
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
-              {[
-                "Literature",
-                "Psychology",
-                "Philosophy",
-                "Open-Telemetry"
-              ].map((interest, i) => (
-                <div key={i} className="group cursor-default flex items-center gap-4 md:gap-8">
-                  <span className="text-sm md:text-lg font-display tracking-[0.2em] uppercase text-white/60 group-hover:text-white group-hover:drop-shadow-[0_0_10px_rgba(255,0,128,0.5)] transition-all duration-500">
-                    {interest}
-                  </span>
-                  {i < 3 && (
-                    <div className="h-1 w-1 rounded-full bg-white/20 group-hover:bg-[#ff0080] transition-colors duration-500" />
-                  )}
-                </div>
-              ))}
+            <div className="flex justify-center items-center group cursor-default">
+              <span className="text-[9px] sm:text-sm md:text-lg font-display tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white/60 group-hover:text-white group-hover:drop-shadow-[0_0_10px_rgba(255,0,128,0.5)] transition-all duration-500 whitespace-nowrap">
+                Literature 
+                <span className="text-white/20 mx-2 md:mx-4 group-hover:text-[#ff0080] transition-colors duration-500">•</span> 
+                Psychology 
+                <span className="text-white/20 mx-2 md:mx-4 group-hover:text-[#ff0080] transition-colors duration-500">•</span> 
+                Philosophy 
+                <span className="text-white/20 mx-2 md:mx-4 group-hover:text-[#ff0080] transition-colors duration-500">•</span> 
+                Open-Telemetry
+              </span>
             </div>
           </div>
         </section>
