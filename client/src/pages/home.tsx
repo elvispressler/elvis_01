@@ -242,7 +242,7 @@ export default function Home() {
         {/* Engineering Stats */}
         <section className="py-20 border-y border-white/5 grid grid-cols-2 md:grid-cols-4 gap-12">
           {[
-            { label: "Core Focus", val: "Infrastructure & Lifecycle" },
+            { label: "Core Focus", val: "Infrastructure - Lifecycle - Monitoring" },
             { label: "Methodology", val: "Agile & ITIL" },
             { label: "Scale", val: "Enterprise Level" },
             { label: "Mindset", val: "Continuous Improvement" },
