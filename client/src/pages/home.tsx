@@ -254,6 +254,28 @@ export default function Home() {
           ))}
         </section>
 
+        {/* Interests */}
+        <section className="py-20 border-b border-white/5">
+          <div className="max-w-4xl mx-auto text-center space-y-12">
+            <h2 className="text-[10px] uppercase tracking-[0.5em] text-white/40">Beyond the Terminal</h2>
+            <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+              {[
+                "Literature",
+                "Psychology",
+                "Philosophy",
+                "Open-Telemetry"
+              ].map((interest, i) => (
+                <div key={i} className="group cursor-default flex flex-col items-center gap-3">
+                  <div className="h-1 w-1 rounded-full bg-white/20 group-hover:bg-[#ff0080] transition-colors duration-500" />
+                  <span className="text-sm md:text-lg font-display tracking-[0.2em] uppercase text-white/60 group-hover:text-white group-hover:drop-shadow-[0_0_10px_rgba(255,0,128,0.5)] transition-all duration-500">
+                    {interest}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact System */}
         <section className="pt-20 text-center space-y-16">
           <div className="space-y-4">
