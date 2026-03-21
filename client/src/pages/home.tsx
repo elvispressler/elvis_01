@@ -74,14 +74,14 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-center z-10 w-full"
+          className="text-center z-10 w-full flex flex-col items-center gap-16 md:gap-24"
         >
           <motion.div 
             style={{ 
               backgroundColor: pillBg,
               borderColor: pillBorder
             }}
-            className="inline-block mb-4 px-3 py-1 border rounded-full"
+            className="inline-block px-3 py-1 border rounded-full"
           >
             <motion.span 
               style={{ color: textColor }}
@@ -92,7 +92,7 @@ export default function Home() {
           </motion.div>
           <motion.h1 
             style={{ scale: nameScale }}
-            className="font-display text-6xl md:text-9xl font-black uppercase tracking-[0.15em] mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30 transform-origin-center whitespace-nowrap"
+            className="font-display text-6xl md:text-9xl font-black uppercase tracking-[0.15em] drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30 transform-origin-center whitespace-nowrap"
           >
             Erich Florow
           </motion.h1>
