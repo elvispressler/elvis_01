@@ -30,7 +30,7 @@ export function ScrollBackground() {
         setIsScrolling(false);
         // Gently return to blurry idle state
         smoothBlurValue.set(30);
-      }, 3000);
+      }, 1500);
     });
 
     return () => unsubscribe();
