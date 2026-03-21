@@ -219,13 +219,13 @@ export default function Home() {
         {/* Engineering Stats */}
         <section className="py-20 border-y border-white/5 grid grid-cols-2 md:grid-cols-4 gap-12">
           {[
-            { label: "Uptime focus", val: "99.99%" },
-            { label: "Systems Migrated", val: "200+" },
-            { label: "Expertise years", val: "20+" },
-            { label: "Project lead", val: "Global" },
+            { label: "Core Focus", val: "Infrastructure & Lifecycle" },
+            { label: "Methodology", val: "Agile & ITIL" },
+            { label: "Scale", val: "Enterprise Level" },
+            { label: "Mindset", val: "Continuous Improvement" },
           ].map((s, i) => (
             <div key={i} className="text-center space-y-2">
-              <div className="text-3xl font-display font-black tracking-tighter text-white/80">{s.val}</div>
+              <div className="text-lg md:text-xl font-display font-black tracking-tighter text-white/80">{s.val}</div>
               <div className="text-[9px] uppercase tracking-[0.4em] text-white/20">{s.label}</div>
             </div>
           ))}
