@@ -1,8 +1,17 @@
 import { ScrollBackground } from "@/components/ScrollBackground";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Terminal, Cpu, Database, Globe, Code2, Briefcase, Zap, Shield, BarChart3, Users } from "lucide-react";
 
 export default function Home() {
+  const { scrollY } = useScroll();
+  
+  // Scroll animations for hero section
+  const pillBg = useTransform(scrollY, [0, 150], ["rgba(255, 255, 255, 0.05)", "rgba(255, 0, 128, 0.1)"]);
+  const pillBorder = useTransform(scrollY, [0, 150], ["rgba(255, 255, 255, 0.2)", "rgba(255, 0, 128, 0.5)"]);
+  const textColor = useTransform(scrollY, [0, 150], ["rgba(255, 255, 255, 0.5)", "rgba(255, 0, 128, 1)"]);
+  
+  const nameScale = useTransform(scrollY, [0, 300], [1, 0.75]);
+
   const skills = [
     { category: "Core Ops", items: ["Linux", "Unix", "Windows", "Kubernetes", "Docker", "Jenkins", "Git", "Bash"] },
     { category: "Data & API", items: ["Oracle", "PostgreSQL", "Progress", "SQL", "REST-APIs"] },
@@ -65,14 +74,28 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-center z-10"
+          className="text-center z-10 w-full"
         >
-          <div className="inline-block mb-4 px-3 py-1 border border-white/20 bg-white/5 rounded-full">
-            <span className="text-[10px] uppercase tracking-[0.4em] font-display text-white/50">Infrastructure | LifeCycle-Management | Monitoring | Service & Operations</span>
-          </div>
-          <h1 className="font-display text-6xl md:text-9xl font-black uppercase tracking-[0.15em] mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">
+          <motion.div 
+            style={{ 
+              backgroundColor: pillBg,
+              borderColor: pillBorder
+            }}
+            className="inline-block mb-4 px-3 py-1 border rounded-full"
+          >
+            <motion.span 
+              style={{ color: textColor }}
+              className="text-[10px] uppercase tracking-[0.4em] font-display block"
+            >
+              Infrastructure | LifeCycle-Management | Monitoring | Service & Operations
+            </motion.span>
+          </motion.div>
+          <motion.h1 
+            style={{ scale: nameScale }}
+            className="font-display text-6xl md:text-9xl font-black uppercase tracking-[0.15em] mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30 transform-origin-center whitespace-nowrap"
+          >
             Erich Florow
-          </h1>
+          </motion.h1>
           <p className="text-sm md:text-base text-white/60 max-w-2xl mx-auto font-light tracking-[0.3em] italic leading-relaxed">
             "Find what you love and let it kill you."
           </p>
