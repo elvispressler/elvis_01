@@ -224,9 +224,9 @@ export default function Home() {
             { label: "Scale", val: "Enterprise Level" },
             { label: "Mindset", val: "Continuous Improvement" },
           ].map((s, i) => (
-            <div key={i} className="text-center space-y-2">
-              <div className="text-lg md:text-xl font-display font-black tracking-tighter text-white/80">{s.val}</div>
-              <div className="text-[9px] uppercase tracking-[0.4em] text-white/20">{s.label}</div>
+            <div key={i} className="text-center space-y-2 group cursor-default">
+              <div className="text-lg md:text-xl font-display font-black tracking-tighter text-white/80 group-hover:text-white transition-colors">{s.val}</div>
+              <div className="text-[10px] uppercase tracking-[0.4em] text-white/40 group-hover:text-[#ff0080] transition-colors">{s.label}</div>
             </div>
           ))}
         </section>
@@ -235,15 +235,15 @@ export default function Home() {
         <section className="pt-20 text-center space-y-16">
           <div className="space-y-4">
             <h2 className="font-display text-5xl md:text-7xl uppercase tracking-[0.3em] opacity-80">Connect_</h2>
-            <p className="text-xs text-white/20 font-light tracking-[0.4em] uppercase">Ready for deployment</p>
+            <p className="text-xs text-white/40 font-light tracking-[0.4em] uppercase">Ready for deployment</p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-12">
             <a href={`mailto:erich.florow@gmail.com`} className="group space-y-2">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-white/20 group-hover:text-[#ff0080]/50 transition-colors">Direct Terminal</div>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 group-hover:text-[#ff0080]/80 transition-colors">Direct Terminal</div>
               <div className="text-lg font-mono text-white/60 border-b border-white/10 group-hover:border-[#ff0080]/50 group-hover:text-[#ff0080] transition-all">erich.florow@gmail.com</div>
             </a>
             <a href="https://www.linkedin.com/in/erich-florow-68777571" target="_blank" rel="noopener noreferrer" className="group space-y-2">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-white/20 group-hover:text-[#ff0080]/50 transition-colors">Professional Network</div>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 group-hover:text-[#ff0080]/80 transition-colors">Professional Network</div>
               <div className="text-lg font-mono text-white/60 border-b border-white/10 group-hover:border-[#ff0080]/50 group-hover:text-[#ff0080] transition-all flex items-center gap-2">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn
