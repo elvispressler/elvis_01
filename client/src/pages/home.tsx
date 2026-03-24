@@ -1,9 +1,18 @@
 import { ScrollBackground } from "@/components/ScrollBackground";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, Terminal, Cpu, Database, Globe, Code2, Briefcase, Zap, Shield, BarChart3, Users } from "lucide-react";
+import { useState } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { ArrowDown, Terminal, Cpu, Database, Globe, Code2, Briefcase, Zap, Shield, BarChart3, Users, Check } from "lucide-react";
 
 export default function Home() {
   const { scrollY } = useScroll();
+  const [copied, setCopied] = useState(false);
+  
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText("erich.florow@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   
   // Scroll animations for hero section
   const pillBg = useTransform(scrollY, [0, 150], ["rgba(255, 255, 255, 0.05)", "rgba(255, 0, 128, 0.1)"]);
@@ -118,10 +127,36 @@ export default function Home() {
         {/* Core Capabilities */}
         <section className="pt-20 space-y-20 relative">
           <div className="absolute right-0 -top-8 z-10">
-            <a href="mailto:erich.florow@gmail.com" className="inline-flex items-center gap-3 px-6 py-3 border border-[#ff0080]/30 bg-[#ff0080]/5 hover:bg-[#ff0080]/20 text-[#ff0080] rounded-full transition-all duration-300 backdrop-blur-md group">
-              <span className="text-[10px] uppercase tracking-[0.3em] font-display font-semibold">Initiate Handshake</span>
-              <Terminal className="w-4 h-4 group-hover:animate-pulse" />
-            </a>
+            <button 
+              onClick={handleCopyEmail}
+              className="inline-flex items-center gap-3 px-6 py-3 border border-white/20 bg-white/5 hover:bg-white/10 text-white/80 hover:text-white rounded-full transition-all duration-300 backdrop-blur-md group relative overflow-hidden"
+            >
+              <AnimatePresence mode="wait">
+                {copied ? (
+                  <motion.div
+                    key="copied"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="flex items-center gap-2 text-[#ff0080]"
+                  >
+                    <span className="text-[10px] uppercase tracking-[0.3em] font-display font-semibold">Address Copied</span>
+                    <Check className="w-4 h-4" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="copy"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="flex items-center gap-2"
+                  >
+                    <span className="text-[10px] uppercase tracking-[0.3em] font-display font-semibold">Initiate Handshake</span>
+                    <Terminal className="w-4 h-4 group-hover:text-[#ff0080] transition-colors" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
