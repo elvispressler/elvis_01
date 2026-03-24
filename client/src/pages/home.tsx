@@ -1,4 +1,5 @@
 import { ScrollBackground } from "@/components/ScrollBackground";
+import { MagicSpinner } from "@/components/MagicSpinner";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Terminal, Cpu, Database, Globe, Code2, Briefcase, Zap, Shield, BarChart3, Users } from "lucide-react";
 
@@ -108,7 +109,7 @@ export default function Home() {
           className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-white/30"
         >
           <span className="text-[10px] uppercase tracking-[0.5em]">Scan Data</span>
-          <ArrowDown className="w-4 h-4 animate-bounce" />
+          <MagicSpinner />
         </motion.div>
       </section>
 
