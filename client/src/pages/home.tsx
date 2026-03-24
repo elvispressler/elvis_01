@@ -258,18 +258,20 @@ export default function Home() {
         <section className="py-20 border-b border-white/5 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-[10px] uppercase tracking-[0.5em] text-white/40">Beyond the Terminal</h2>
-            <div className="flex justify-center items-center gap-4 md:gap-8">
+            <div className="flex justify-center items-center gap-4 md:gap-8 flex-wrap">
               {[
-                "Literature",
-                "Psychology",
-                "Philosophy",
-                "Open-Telemetry"
-              ].map((interest, i) => (
+                "literature",
+                "psychology",
+                "philosophy",
+                "open-telemetry",
+                "decency",
+                "humility"
+              ].map((interest, i, arr) => (
                 <div key={i} className="flex items-center gap-4 md:gap-8">
-                  <span className="text-[10px] sm:text-sm md:text-lg font-display tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white/60 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,0,128,0.5)] cursor-default transition-all duration-300">
+                  <span className="text-[10px] sm:text-sm md:text-lg font-display tracking-[0.1em] sm:tracking-[0.2em] lowercase text-white/60 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,0,128,0.5)] cursor-default transition-all duration-300">
                     {interest}
                   </span>
-                  {i < 3 && (
+                  {i < arr.length - 1 && (
                     <span className="text-white/20 text-[10px] sm:text-sm md:text-lg">•</span>
                   )}
                 </div>
