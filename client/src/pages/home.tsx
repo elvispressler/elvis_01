@@ -284,7 +284,7 @@ export default function Home() {
         <section className="pt-20 text-center space-y-16">
           <div className="space-y-4">
             <h2 className="font-display text-5xl md:text-7xl uppercase tracking-[0.3em] opacity-80">Connect_</h2>
-            <p className="text-xs text-white/40 font-light tracking-[0.4em] uppercase">Ready for deployment</p>
+            <p className="text-xs text-white/40 font-light tracking-[0.4em] uppercase">Turning wine into sweat</p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-12">
             <a href={`mailto:erich.florow@gmail.com`} className="group space-y-2">
