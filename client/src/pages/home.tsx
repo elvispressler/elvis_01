@@ -296,29 +296,57 @@ export default function Home() {
           ))}
         </section>
 
-        {/* Interests */}
+        {/* Interests & Languages */}
         <section className="py-20 border-b border-white/5 overflow-hidden">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-[10px] uppercase tracking-[0.5em] text-white/60">Beyond the Terminal</h2>
-            <div className="flex justify-center items-center gap-4 md:gap-8 flex-wrap">
-              {[
-                "literature",
-                "psychology",
-                "philosophy",
-                "open-telemetry",
-                "decency",
-                "humility"
-              ].map((interest, i, arr) => (
-                <div key={i} className="flex items-center gap-4 md:gap-8">
-                  <span className="text-[10px] sm:text-sm md:text-lg font-display tracking-[0.1em] sm:tracking-[0.2em] lowercase text-white/60 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,0,128,0.5)] cursor-default transition-all duration-300">
-                    {interest}
-                  </span>
-                  {i < arr.length - 1 && (
-                    <span className="text-white/20 text-[10px] sm:text-sm md:text-lg">•</span>
-                  )}
-                </div>
-              ))}
+          <div className="max-w-4xl mx-auto space-y-16">
+            
+            {/* Languages */}
+            <div className="text-center space-y-8">
+              <h2 className="text-[10px] uppercase tracking-[0.5em] text-white/60">Language Modules</h2>
+              <div className="flex justify-center items-center gap-4 md:gap-12 flex-wrap">
+                {[
+                  { lang: "German", level: "Native", code: "DE" },
+                  { lang: "English", level: "Fluent", code: "EN" },
+                  { lang: "Spanish", level: "Intermediate", code: "ES" },
+                  { lang: "French", level: "Basic", code: "FR" }
+                ].map((l, i) => (
+                  <div key={i} className="group flex flex-col items-center gap-2">
+                    <div className="w-12 h-12 rounded-full border border-white/10 bg-white/[0.02] flex items-center justify-center group-hover:border-[#ff0080]/50 group-hover:bg-[#ff0080]/10 transition-all duration-300">
+                      <span className="text-xs font-mono text-white/40 group-hover:text-[#ff0080]">{l.code}</span>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-[10px] uppercase tracking-widest text-white/80 group-hover:text-white transition-colors">{l.lang}</div>
+                      <div className="text-[8px] uppercase tracking-[0.2em] text-white/40">{l.level}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* Interests */}
+            <div className="text-center space-y-8">
+              <h2 className="text-[10px] uppercase tracking-[0.5em] text-white/60">Beyond the Terminal</h2>
+              <div className="flex justify-center items-center gap-4 md:gap-8 flex-wrap">
+                {[
+                  "literature",
+                  "psychology",
+                  "philosophy",
+                  "open-telemetry",
+                  "decency",
+                  "humility"
+                ].map((interest, i, arr) => (
+                  <div key={i} className="flex items-center gap-4 md:gap-8">
+                    <span className="text-[10px] sm:text-sm md:text-lg font-display tracking-[0.1em] sm:tracking-[0.2em] lowercase text-white/60 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,0,128,0.5)] cursor-default transition-all duration-300">
+                      {interest}
+                    </span>
+                    {i < arr.length - 1 && (
+                      <span className="text-white/20 text-[10px] sm:text-sm md:text-lg">•</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </section>
 
