@@ -39,7 +39,18 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div style="height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; background-color: #000; flex-direction: column; gap: 20px;">
+        <div style="width: 40px; height: 40px; border: 3px solid rgba(255, 0, 128, 0.3); border-top-color: #ff0080; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        <div style="color: #ff0080; font-family: monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Booting Sequence...</div>
+      </div>
+      <style>
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+        body { margin: 0; background-color: #000; }
+      </style>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
