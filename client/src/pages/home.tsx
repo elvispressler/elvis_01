@@ -253,7 +253,7 @@ export default function Home() {
                         { title: "K8S Migration", impact: "apps-transition to company-clusters", icon: <Cpu className="w-4 h-4" /> },
                         { title: "Log Orchestration", impact: "aiming zero-downtimes in owned apps - high quality exports/dashboards concerning reliability, expediency and design", icon: <BarChart3 className="w-4 h-4" /> },
                         { title: "Jira Automation", impact: "commited to make it easier - API - script-runner - groovy", icon: <Zap className="w-4 h-4" /> },
-                        { title: "PLANS TO COME", impact: "better and faster error-detecting, tuning automated tasks, incident-automation, SOAP to REST transition", icon: <Zap className="w-4 h-4" /> }
+                        { title: "PLANS TO COME", impact: "better and faster error-detecting, tuning automated tasks, incident-automation, SOAP to REST transition, open-telemetry", icon: <Zap className="w-4 h-4" /> }
                       ].map((project, idx) => (
                         <div key={idx} className="p-4 border border-white/5 bg-white/[0.01] rounded-xl hover:border-[#ff0080]/30 hover:bg-[#ff0080]/5 transition-all duration-500 group/project">
                           <div className="flex items-center gap-3 mb-2">
