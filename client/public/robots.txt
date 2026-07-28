@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elvispressler.de/sitemap.xml
+
+# Plain-text accessible CV for crawlers and AI tools
+# https://elvispressler.de/resume.html
