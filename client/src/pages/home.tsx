@@ -228,7 +228,7 @@ export default function Home() {
                   </div>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {exp.tags.map((tag, j) => (
-                      <span key={j} className="text-[8px] uppercase tracking-tighter px-2 py-0.5 border border-white/20 bg-white/5 text-white/60 hover:border-[#ff0080]/50 hover:bg-[#ff0080]/10 hover:text-[#ff0080] transition-all duration-300 cursor-default">
+                      <span key={j} className="text-[11px] uppercase tracking-widest px-3 py-1 border border-white/30 bg-white/10 text-white/80 hover:border-[#ff0080]/60 hover:bg-[#ff0080]/10 hover:text-[#ff0080] transition-all duration-300 cursor-default">
                         {tag}
                       </span>
                     ))}
