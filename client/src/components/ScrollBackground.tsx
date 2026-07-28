@@ -7,13 +7,13 @@ export function ScrollBackground() {
   const [isScrolling, setIsScrolling] = useState(false);
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  // Define the base blur target based on scroll (0-500px -> 20-0px blur)
-  const targetBlur = useTransform(scrollY, [0, 500], [30, 0]);
+  // Sharpens quickly within the first 150px of scroll
+  const targetBlur = useTransform(scrollY, [0, 150], [20, 0]);
 
-  // Use a spring for super smooth transitions
-  const smoothBlurValue = useSpring(30, {
-    stiffness: 8,   // Very gentle start
-    damping: 25,    // Enough damping to make it glide smoothly into place without bouncing
+  // Fast spring so the sharpening follows scroll immediately
+  const smoothBlurValue = useSpring(20, {
+    stiffness: 120,
+    damping: 20,
     restDelta: 0.001
   });
 
@@ -28,8 +28,8 @@ export function ScrollBackground() {
       
       scrollTimeout.current = setTimeout(() => {
         setIsScrolling(false);
-        // Gently return to blurry idle state
-        smoothBlurValue.set(30);
+        // Return to blurry idle state
+        smoothBlurValue.set(20);
       }, 1500);
     });
 
