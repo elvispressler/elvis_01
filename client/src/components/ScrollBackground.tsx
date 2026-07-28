@@ -10,10 +10,10 @@ export function ScrollBackground() {
   // Sharpens quickly within the first 150px of scroll
   const targetBlur = useTransform(scrollY, [0, 150], [20, 0]);
 
-  // Fast spring so the sharpening follows scroll immediately
+  // Smooth but responsive spring
   const smoothBlurValue = useSpring(20, {
-    stiffness: 120,
-    damping: 20,
+    stiffness: 35,
+    damping: 28,
     restDelta: 0.001
   });
 
